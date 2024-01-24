@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .h-screen-minus-100 {
+    height: calc(100vh - 100px);
+  }
+  .h-25 {
+    height: 6.25rem;
+  }
+  .h-26 {
+    height: 6.5rem;
+  }
+  .h-27 {
+    height: 6.75rem;
+  }
+}
+
+.input-container,
+.view-container {
+  @apply relative w-full mb-3 p-6;
+}
+
+.input-container label,
+.view-container label {
+  @apply block text-slate-600 text-sm font-bold mb-2;
+}
+
+.input-container input[type="text"],
+.input-container input[type="email"],
+.input-container input[type="password"],
+.input-container input[type="number"],
+.input-container input[type="date"],
+.input-container input[type="tel"],
+.input-container input[type="radio"],
+.input-container textarea,
+.input-container select {
+  @apply border-0 px-3 py-3 placeholder-slate-400 text-slate-800 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150;
+}
+
+.checkbox-container {
+  @apply relative w-full mb-3 flex items-center cursor-pointer;
+}
+
+.checkbox-container input[type="checkbox"] {
+  @apply cursor-pointer  border-0 px-3 py-3 placeholder-slate-300 text-slate-600  rounded text-sm shadow focus:outline-none focus:ring ease-linear transition-all duration-150;
+}
+
+.checkbox-container label {
+  @apply cursor-pointer block  text-base font-bold ml-2;
+}
+
+.input-container select {
+  @apply border-0 px-3 py-3 placeholder-slate-300 text-slate-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150;
+}
+
+.primary-btn {
+  @apply uppercase shadow-sm relative min-w-140-px flex justify-center py-3 px-4 border 
+    border-transparent text-sm rounded-md text-white bg-primary hover:bg-primaryLight focus:outline-none 
+    focus:border-primaryDark active:bg-primaryDark transition duration-150 ease-in-out mb-3 leading-none focus:shadow-outline;
+}
+
+.error-text {
+  @apply text-red-500 text-sm;
+}
+
+input:disabled {
+  @apply bg-gray-300 text-gray-500 !important;
+}
+
+button:disabled,
+button:disabled:hover,
+button:disabled:focus,
+button:disabled:active {
+  @apply bg-gray-500 text-gray-300;
+}
+
+.view-container div {
+  @apply text-lg font-medium text-gray-700;
+}
+
+.large-label {
+  @apply block text-white text-lg font-bold mb-2  !important;
+}
+
+.large-input {
+  @apply text-4xl border-0 px-3 py-3 placeholder-slate-400 text-slate-800 bg-white rounded  shadow focus:outline-none focus:ring w-2/4 ease-linear transition-all duration-150 !important;
+}
+.large-checkbox {
+  @apply flex justify-center  relative w-full mb-3  cursor-pointer !important;   
+}
+
+.large-checkbox input[type="checkbox"] {
+  @apply w-8 h-8 border-0 px-3 py-3 mb-10 placeholder-slate-300 text-slate-600  rounded text-sm shadow focus:outline-none focus:ring ease-linear transition-all duration-150 !important;
+}
+.large-checkbox label {
+  @apply cursor-pointer block  text-xl font-bold ml-2 !important;
+}
+
+.large-select {
+  @apply text-4xl border-0 w-2/4 mx-auto mt-10 mb-10 !important;
+}
+
+.large-select select {
+  @apply text-4xl w-full border-0 px-3 py-3 placeholder-slate-300 text-slate-600 bg-white rounded  shadow focus:outline-none focus:ring ease-linear transition-all duration-150 !important;
+}
